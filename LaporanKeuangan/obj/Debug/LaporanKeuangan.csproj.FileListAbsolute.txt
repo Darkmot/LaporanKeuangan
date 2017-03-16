@@ -1,0 +1,9 @@
+D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\bin\Debug\LaporanKeuangan.exe.config
+D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\bin\Debug\LaporanKeuangan.exe
+D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\bin\Debug\LaporanKeuangan.pdb
+D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\LaporanKeuangan.csprojResolveAssemblyReference.cache
+D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\LaporanKeuangan.MainForm.resources
+D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\LaporanKeuangan.Properties.Resources.resources
+D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\LaporanKeuangan.csproj.GenerateResource.Cache
+D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\LaporanKeuangan.exe
+D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\LaporanKeuangan.pdb
