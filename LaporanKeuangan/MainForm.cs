@@ -16,5 +16,15 @@ namespace LaporanKeuangan
         {
             InitializeComponent();
         }
+
+        private void inputDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InputPanel.Visible = true;
+        }
+
+        private void trialBalanceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InputPanel.Visible = false;
+        }
     }
 }
