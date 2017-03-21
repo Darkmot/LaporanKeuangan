@@ -7,3 +7,5 @@ D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\LaporanKeuangan.Prop
 D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\LaporanKeuangan.csproj.GenerateResource.Cache
 D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\LaporanKeuangan.exe
 D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\LaporanKeuangan.pdb
+D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\bin\Debug\LaporanKeuanganDatabase.mdf
+D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\bin\Debug\LaporanKeuanganDatabase_log.ldf

@@ -183,7 +183,7 @@
             // 
             // TanggalPicker
             // 
-            this.TanggalPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.TanggalPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.TanggalPicker.Location = new System.Drawing.Point(117, 35);
             this.TanggalPicker.Name = "TanggalPicker";
             this.TanggalPicker.Size = new System.Drawing.Size(157, 26);
@@ -226,6 +226,7 @@
             this.TransaksiComboBox.Name = "TransaksiComboBox";
             this.TransaksiComboBox.Size = new System.Drawing.Size(156, 30);
             this.TransaksiComboBox.TabIndex = 1;
+            this.TransaksiComboBox.SelectedIndexChanged += new System.EventHandler(this.TransaksiComboBox_SelectedIndexChanged);
             // 
             // MainMenu
             // 
@@ -249,7 +250,7 @@
             // inputDataToolStripMenuItem
             // 
             this.inputDataToolStripMenuItem.Name = "inputDataToolStripMenuItem";
-            this.inputDataToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.inputDataToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.inputDataToolStripMenuItem.Text = "Input Data";
             this.inputDataToolStripMenuItem.Click += new System.EventHandler(this.inputDataToolStripMenuItem_Click);
             // 
@@ -264,7 +265,7 @@
             // trialBalanceToolStripMenuItem
             // 
             this.trialBalanceToolStripMenuItem.Name = "trialBalanceToolStripMenuItem";
-            this.trialBalanceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.trialBalanceToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.trialBalanceToolStripMenuItem.Text = "Trial Balance";
             this.trialBalanceToolStripMenuItem.Click += new System.EventHandler(this.trialBalanceToolStripMenuItem_Click);
             // 
@@ -280,6 +281,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Laporan Keuangan";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.InputPanel.ResumeLayout(false);
             this.InputPanel.PerformLayout();
             this.TransaksiBaruGroup.ResumeLayout(false);
