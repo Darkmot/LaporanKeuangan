@@ -108,6 +108,13 @@ namespace LaporanKeuangan
             
                 //Formatting
                 InputGridView.Columns[0].DefaultCellStyle.Format = "dd-MMM-yyyy";
+                InputGridView.Columns[3].DefaultCellStyle.Format = "N0";
+                InputGridView.Columns[4].DefaultCellStyle.Format = "N0";
+
+                for (int i = 0; i < InputGridView.Columns.Count; i++)
+                {
+                    InputGridView.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                }
 
                 c.Close();
             }

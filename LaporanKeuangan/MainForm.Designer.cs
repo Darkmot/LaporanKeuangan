@@ -106,7 +106,7 @@
             this.KeteranganTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KeteranganTextBox.Location = new System.Drawing.Point(117, 188);
             this.KeteranganTextBox.Name = "KeteranganTextBox";
-            this.KeteranganTextBox.Size = new System.Drawing.Size(400, 26);
+            this.KeteranganTextBox.Size = new System.Drawing.Size(528, 26);
             this.KeteranganTextBox.TabIndex = 15;
             // 
             // label5
