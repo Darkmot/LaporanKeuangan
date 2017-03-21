@@ -34,6 +34,13 @@ namespace LaporanKeuangan
         {
             //Initialize DateTime Picker
             TanggalPicker.CustomFormat = "dd-MMM-yyyy";
+            RangePickerStart.CustomFormat = "dd-MMM-yyyy";
+            RangePickerEnd.CustomFormat = "dd-MMM-yyyy";
+            DateTime curDate = DateTime.Now;
+            RangePickerStart.Value = new DateTime(curDate.Year, curDate.Month, 1);
+            RangePickerEnd.Value = new DateTime(curDate.Year, curDate.Month, DateTime.DaysInMonth(curDate.Year, curDate.Month));
+            JumlahNumeric.Maximum = Decimal.MaxValue;
+
 
             //Initialize Transaksi Selection
             try
@@ -56,7 +63,7 @@ namespace LaporanKeuangan
                 MessageBox.Show(exception.ToString(),"Database Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
-            refreshInputGridView(TransaksiComboBox.SelectedIndex);
+            refreshInputGridView(TransaksiComboBox.SelectedIndex,RangePickerStart.Value,RangePickerEnd.Value);
             
             //Initialize Daftar Akun Selection
             try
@@ -83,7 +90,7 @@ namespace LaporanKeuangan
 
         }
 
-        void refreshInputGridView(int jenis_id)
+        void refreshInputGridView(int jenis_id, DateTime rangeStart, DateTime rangeEnd)
         {
             try
             {
@@ -97,9 +104,13 @@ namespace LaporanKeuangan
                 q += "FROM DATA_TRANSAKSI, DAFTAR_AKUN ";
                 q += "WHERE DATA_TRANSAKSI.kode_akun = DAFTAR_AKUN.kode_akun ";
                 q += "AND DATA_TRANSAKSI.jenis_id = " + jenis_id + " ";
+                q += "AND DATA_TRANSAKSI.tanggal_transaksi >= '" + rangeStart + "' ";
+                q += "AND DATA_TRANSAKSI.tanggal_transaksi <= '" + rangeEnd + "' ";
                 q += "ORDER BY tanggal_transaksi";
 
-                SqlConnection c = new SqlConnection(global::LaporanKeuangan.Properties.Settings.Default.LaporanKeuanganDatabaseConnectionString);
+                Console.WriteLine(q);
+
+                SqlConnection c = new SqlConnection(conString);
                 SqlDataAdapter ad = new SqlDataAdapter(q, c);
                 DataSet ds = new DataSet();
                 ad.Fill(ds);
@@ -126,8 +137,46 @@ namespace LaporanKeuangan
         private void TransaksiComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Console.WriteLine("Transkasi Changed");
-            refreshInputGridView(TransaksiComboBox.SelectedIndex);
+            refreshInputGridView(TransaksiComboBox.SelectedIndex, RangePickerStart.Value, RangePickerEnd.Value);
 
         }
+
+        private void TambahButton_Click(object sender, EventArgs e)
+        {
+            SqlConnection c = new SqlConnection(conString);
+            try
+            {
+                string q = "INSERT INTO DATA_TRANSAKSI (jenis_id,tanggal_transaksi,kode_akun,debet_transaksi,kredit_transaksi,keterangan_transaksi) ";
+                q += "values (" + TransaksiComboBox.SelectedIndex + ", ";
+                q += "'" + TanggalPicker.Value + "', ";
+                q += kodeAkunList[KodeAkunCombo.SelectedIndex] + ", ";
+                if (DebetRadio.Checked)
+                {
+                    q += JumlahNumeric.Value + ", 0, ";
+                }
+                else
+                {
+                    q += "0, " + JumlahNumeric.Value + ", ";
+                }
+                q += "'" + KeteranganTextBox.Text + "')";
+
+                SqlCommand execQ = new SqlCommand(q, c);
+                c.Open();
+                execQ.ExecuteNonQuery();
+
+                MessageBox.Show("Transaski Berhasil Ditambah!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                c.Close();
+            }
+            refreshInputGridView(TransaksiComboBox.SelectedIndex, RangePickerStart.Value, RangePickerEnd.Value);
+
+        }
+
     }
 }

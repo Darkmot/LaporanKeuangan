@@ -49,6 +49,10 @@
             this.inputDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.outputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trialBalanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RangePickerStart = new System.Windows.Forms.DateTimePicker();
+            this.RangeLabel = new System.Windows.Forms.Label();
+            this.RangePickerEnd = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.InputPanel.SuspendLayout();
             this.TransaksiBaruGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.JumlahNumeric)).BeginInit();
@@ -59,6 +63,10 @@
             // InputPanel
             // 
             this.InputPanel.AutoSize = true;
+            this.InputPanel.Controls.Add(this.label6);
+            this.InputPanel.Controls.Add(this.RangePickerEnd);
+            this.InputPanel.Controls.Add(this.RangeLabel);
+            this.InputPanel.Controls.Add(this.RangePickerStart);
             this.InputPanel.Controls.Add(this.TransaksiBaruGroup);
             this.InputPanel.Controls.Add(this.InputGridView);
             this.InputPanel.Controls.Add(this.label1);
@@ -100,6 +108,7 @@
             this.TambahButton.TabIndex = 16;
             this.TambahButton.Text = "Tambah Transaksi";
             this.TambahButton.UseVisualStyleBackColor = true;
+            this.TambahButton.Click += new System.EventHandler(this.TambahButton_Click);
             // 
             // KeteranganTextBox
             // 
@@ -269,6 +278,46 @@
             this.trialBalanceToolStripMenuItem.Text = "Trial Balance";
             this.trialBalanceToolStripMenuItem.Click += new System.EventHandler(this.trialBalanceToolStripMenuItem_Click);
             // 
+            // RangePickerStart
+            // 
+            this.RangePickerStart.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RangePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.RangePickerStart.Location = new System.Drawing.Point(467, 43);
+            this.RangePickerStart.Name = "RangePickerStart";
+            this.RangePickerStart.Size = new System.Drawing.Size(89, 22);
+            this.RangePickerStart.TabIndex = 17;
+            this.RangePickerStart.ValueChanged += new System.EventHandler(this.TransaksiComboBox_SelectedIndexChanged);
+            // 
+            // RangeLabel
+            // 
+            this.RangeLabel.AutoSize = true;
+            this.RangeLabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RangeLabel.Location = new System.Drawing.Point(421, 45);
+            this.RangeLabel.Name = "RangeLabel";
+            this.RangeLabel.Size = new System.Drawing.Size(40, 16);
+            this.RangeLabel.TabIndex = 18;
+            this.RangeLabel.Text = "Range";
+            // 
+            // RangePickerEnd
+            // 
+            this.RangePickerEnd.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RangePickerEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.RangePickerEnd.Location = new System.Drawing.Point(578, 43);
+            this.RangePickerEnd.Name = "RangePickerEnd";
+            this.RangePickerEnd.Size = new System.Drawing.Size(89, 22);
+            this.RangePickerEnd.TabIndex = 19;
+            this.RangePickerEnd.ValueChanged += new System.EventHandler(this.TransaksiComboBox_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(562, 44);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(12, 16);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "-";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,6 +367,10 @@
         private System.Windows.Forms.ToolStripMenuItem inputDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem outputToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trialBalanceToolStripMenuItem;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker RangePickerEnd;
+        private System.Windows.Forms.Label RangeLabel;
+        private System.Windows.Forms.DateTimePicker RangePickerStart;
     }
 }
 
