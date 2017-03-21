@@ -62,6 +62,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LaporanKeuanganDatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaporanKeuanganDatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LaporanKeuanganDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -87,6 +92,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TrialBalanceReport.rdlc" />
+    <None Include="LaporanKeuanganDatabaseDataSet.xsc">
+      <DependentUpon>LaporanKeuanganDatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LaporanKeuanganDatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LaporanKeuanganDatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LaporanKeuanganDatabaseDataSet.xss">
+      <DependentUpon>LaporanKeuanganDatabaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="LaporanKeuanganDataSet.xsc">
       <DependentUpon>LaporanKeuanganDataSet.xsd</DependentUpon>
     </None>

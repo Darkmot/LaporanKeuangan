@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.InputPanel = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.RangePickerEnd = new System.Windows.Forms.DateTimePicker();
@@ -55,12 +57,17 @@
             this.trialBalanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.OutputPanel = new System.Windows.Forms.Panel();
             this.TrialBalanceReportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.LaporanKeuanganDatabaseDataSet = new LaporanKeuangan.LaporanKeuanganDatabaseDataSet();
+            this.DATA_TRANSAKSIBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DATA_TRANSAKSITableAdapter = new LaporanKeuangan.LaporanKeuanganDatabaseDataSetTableAdapters.DATA_TRANSAKSITableAdapter();
             this.InputPanel.SuspendLayout();
             this.TransaksiBaruGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.JumlahNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InputGridView)).BeginInit();
             this.MainMenu.SuspendLayout();
             this.OutputPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LaporanKeuanganDatabaseDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DATA_TRANSAKSIBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // InputPanel
@@ -334,10 +341,28 @@
             // TrialBalanceReportViewer
             // 
             this.TrialBalanceReportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.DATA_TRANSAKSIBindingSource;
+            this.TrialBalanceReportViewer.LocalReport.DataSources.Add(reportDataSource1);
+            this.TrialBalanceReportViewer.LocalReport.ReportEmbeddedResource = "LaporanKeuangan.TrialBalanceReport.rdlc";
             this.TrialBalanceReportViewer.Location = new System.Drawing.Point(0, 0);
             this.TrialBalanceReportViewer.Name = "TrialBalanceReportViewer";
             this.TrialBalanceReportViewer.Size = new System.Drawing.Size(686, 535);
             this.TrialBalanceReportViewer.TabIndex = 0;
+            // 
+            // LaporanKeuanganDatabaseDataSet
+            // 
+            this.LaporanKeuanganDatabaseDataSet.DataSetName = "LaporanKeuanganDatabaseDataSet";
+            this.LaporanKeuanganDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // DATA_TRANSAKSIBindingSource
+            // 
+            this.DATA_TRANSAKSIBindingSource.DataMember = "DATA_TRANSAKSI";
+            this.DATA_TRANSAKSIBindingSource.DataSource = this.LaporanKeuanganDatabaseDataSet;
+            // 
+            // DATA_TRANSAKSITableAdapter
+            // 
+            this.DATA_TRANSAKSITableAdapter.ClearBeforeFill = true;
             // 
             // MainForm
             // 
@@ -362,6 +387,8 @@
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.OutputPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LaporanKeuanganDatabaseDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DATA_TRANSAKSIBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,6 +423,9 @@
         private System.Windows.Forms.DateTimePicker RangePickerStart;
         private System.Windows.Forms.Panel OutputPanel;
         private Microsoft.Reporting.WinForms.ReportViewer TrialBalanceReportViewer;
+        private System.Windows.Forms.BindingSource DATA_TRANSAKSIBindingSource;
+        private LaporanKeuanganDatabaseDataSet LaporanKeuanganDatabaseDataSet;
+        private LaporanKeuanganDatabaseDataSetTableAdapters.DATA_TRANSAKSITableAdapter DATA_TRANSAKSITableAdapter;
     }
 }
 

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
 
 namespace LaporanKeuangan
 {
@@ -91,6 +92,29 @@ namespace LaporanKeuangan
             }
 
             this.TrialBalanceReportViewer.RefreshReport();
+
+
+            try 
+            {
+                LaporanKeuanganDatabaseDataSet lk = new LaporanKeuanganDatabaseDataSet();
+                string q = "SELECT * FROM DATA_TRANSAKSI ORDER BY tanggal_transaksi";
+                SqlConnection c = new SqlConnection(conString);
+                SqlDataAdapter ad = new SqlDataAdapter(q, c);
+                ad.Fill(lk,lk.Tables[1].TableName);
+                Console.WriteLine("Table : " + lk.Tables[1].TableName);
+
+                ReportDataSource rds = new ReportDataSource("DataTransaksiDataset", lk.Tables[1]);
+                TrialBalanceReportViewer.LocalReport.DataSources.Clear();
+                TrialBalanceReportViewer.LocalReport.DataSources.Add(rds);
+                TrialBalanceReportViewer.LocalReport.Refresh();
+                TrialBalanceReportViewer.RefreshReport();
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.ToString(), "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         void refreshInputGridView(int jenis_id, DateTime rangeStart, DateTime rangeEnd)
@@ -111,7 +135,7 @@ namespace LaporanKeuangan
                 q += "AND DATA_TRANSAKSI.tanggal_transaksi <= '" + rangeEnd + "' ";
                 q += "ORDER BY tanggal_transaksi";
 
-                Console.WriteLine(q);
+                //Console.WriteLine(q);
 
                 SqlConnection c = new SqlConnection(conString);
                 SqlDataAdapter ad = new SqlDataAdapter(q, c);

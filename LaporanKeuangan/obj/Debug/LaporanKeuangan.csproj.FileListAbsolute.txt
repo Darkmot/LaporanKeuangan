@@ -9,3 +9,5 @@ D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\LaporanKeuangan.exe
 D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\LaporanKeuangan.pdb
 D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\bin\Debug\LaporanKeuanganDatabase.mdf
 D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\bin\Debug\LaporanKeuanganDatabase_log.ldf
+D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\RdlCompile.cache
+D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\RdlCompile.compiled
