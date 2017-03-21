@@ -24,11 +24,13 @@ namespace LaporanKeuangan
         private void inputDataToolStripMenuItem_Click(object sender, EventArgs e)
         {
             InputPanel.Visible = true;
+            OutputPanel.Visible = false;
         }
 
         private void trialBalanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             InputPanel.Visible = false;
+            OutputPanel.Visible = true;
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -88,6 +90,7 @@ namespace LaporanKeuangan
                 MessageBox.Show(exception.ToString(),"Database Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
+            this.TrialBalanceReportViewer.RefreshReport();
         }
 
         void refreshInputGridView(int jenis_id, DateTime rangeStart, DateTime rangeEnd)

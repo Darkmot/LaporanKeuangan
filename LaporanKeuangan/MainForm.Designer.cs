@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.InputPanel = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.RangePickerEnd = new System.Windows.Forms.DateTimePicker();
+            this.RangeLabel = new System.Windows.Forms.Label();
+            this.RangePickerStart = new System.Windows.Forms.DateTimePicker();
             this.TransaksiBaruGroup = new System.Windows.Forms.GroupBox();
             this.TambahButton = new System.Windows.Forms.Button();
             this.KeteranganTextBox = new System.Windows.Forms.TextBox();
@@ -49,15 +53,14 @@
             this.inputDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.outputToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trialBalanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RangePickerStart = new System.Windows.Forms.DateTimePicker();
-            this.RangeLabel = new System.Windows.Forms.Label();
-            this.RangePickerEnd = new System.Windows.Forms.DateTimePicker();
-            this.label6 = new System.Windows.Forms.Label();
+            this.OutputPanel = new System.Windows.Forms.Panel();
+            this.TrialBalanceReportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.InputPanel.SuspendLayout();
             this.TransaksiBaruGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.JumlahNumeric)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InputGridView)).BeginInit();
             this.MainMenu.SuspendLayout();
+            this.OutputPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // InputPanel
@@ -77,6 +80,46 @@
             this.InputPanel.Size = new System.Drawing.Size(686, 559);
             this.InputPanel.TabIndex = 1;
             this.InputPanel.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(562, 44);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(12, 16);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "-";
+            // 
+            // RangePickerEnd
+            // 
+            this.RangePickerEnd.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RangePickerEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.RangePickerEnd.Location = new System.Drawing.Point(578, 43);
+            this.RangePickerEnd.Name = "RangePickerEnd";
+            this.RangePickerEnd.Size = new System.Drawing.Size(89, 22);
+            this.RangePickerEnd.TabIndex = 19;
+            this.RangePickerEnd.ValueChanged += new System.EventHandler(this.TransaksiComboBox_SelectedIndexChanged);
+            // 
+            // RangeLabel
+            // 
+            this.RangeLabel.AutoSize = true;
+            this.RangeLabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RangeLabel.Location = new System.Drawing.Point(421, 45);
+            this.RangeLabel.Name = "RangeLabel";
+            this.RangeLabel.Size = new System.Drawing.Size(40, 16);
+            this.RangeLabel.TabIndex = 18;
+            this.RangeLabel.Text = "Range";
+            // 
+            // RangePickerStart
+            // 
+            this.RangePickerStart.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RangePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.RangePickerStart.Location = new System.Drawing.Point(467, 43);
+            this.RangePickerStart.Name = "RangePickerStart";
+            this.RangePickerStart.Size = new System.Drawing.Size(89, 22);
+            this.RangePickerStart.TabIndex = 17;
+            this.RangePickerStart.ValueChanged += new System.EventHandler(this.TransaksiComboBox_SelectedIndexChanged);
             // 
             // TransaksiBaruGroup
             // 
@@ -278,51 +321,30 @@
             this.trialBalanceToolStripMenuItem.Text = "Trial Balance";
             this.trialBalanceToolStripMenuItem.Click += new System.EventHandler(this.trialBalanceToolStripMenuItem_Click);
             // 
-            // RangePickerStart
+            // OutputPanel
             // 
-            this.RangePickerStart.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RangePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.RangePickerStart.Location = new System.Drawing.Point(467, 43);
-            this.RangePickerStart.Name = "RangePickerStart";
-            this.RangePickerStart.Size = new System.Drawing.Size(89, 22);
-            this.RangePickerStart.TabIndex = 17;
-            this.RangePickerStart.ValueChanged += new System.EventHandler(this.TransaksiComboBox_SelectedIndexChanged);
+            this.OutputPanel.Controls.Add(this.TrialBalanceReportViewer);
+            this.OutputPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OutputPanel.Location = new System.Drawing.Point(0, 24);
+            this.OutputPanel.Name = "OutputPanel";
+            this.OutputPanel.Size = new System.Drawing.Size(686, 535);
+            this.OutputPanel.TabIndex = 21;
+            this.OutputPanel.Visible = false;
             // 
-            // RangeLabel
+            // TrialBalanceReportViewer
             // 
-            this.RangeLabel.AutoSize = true;
-            this.RangeLabel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RangeLabel.Location = new System.Drawing.Point(421, 45);
-            this.RangeLabel.Name = "RangeLabel";
-            this.RangeLabel.Size = new System.Drawing.Size(40, 16);
-            this.RangeLabel.TabIndex = 18;
-            this.RangeLabel.Text = "Range";
-            // 
-            // RangePickerEnd
-            // 
-            this.RangePickerEnd.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RangePickerEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.RangePickerEnd.Location = new System.Drawing.Point(578, 43);
-            this.RangePickerEnd.Name = "RangePickerEnd";
-            this.RangePickerEnd.Size = new System.Drawing.Size(89, 22);
-            this.RangePickerEnd.TabIndex = 19;
-            this.RangePickerEnd.ValueChanged += new System.EventHandler(this.TransaksiComboBox_SelectedIndexChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(562, 44);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(12, 16);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "-";
+            this.TrialBalanceReportViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TrialBalanceReportViewer.Location = new System.Drawing.Point(0, 0);
+            this.TrialBalanceReportViewer.Name = "TrialBalanceReportViewer";
+            this.TrialBalanceReportViewer.Size = new System.Drawing.Size(686, 535);
+            this.TrialBalanceReportViewer.TabIndex = 0;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(686, 559);
+            this.Controls.Add(this.OutputPanel);
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.InputPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -339,6 +361,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.InputGridView)).EndInit();
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
+            this.OutputPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,6 +394,8 @@
         private System.Windows.Forms.DateTimePicker RangePickerEnd;
         private System.Windows.Forms.Label RangeLabel;
         private System.Windows.Forms.DateTimePicker RangePickerStart;
+        private System.Windows.Forms.Panel OutputPanel;
+        private Microsoft.Reporting.WinForms.ReportViewer TrialBalanceReportViewer;
     }
 }
 
