@@ -11,3 +11,7 @@ D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\bin\Debug\LaporanKeuanganDatab
 D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\bin\Debug\LaporanKeuanganDatabase_log.ldf
 D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\RdlCompile.cache
 D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\RdlCompile.compiled
+D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\bin\Debug\LaporanKeuangan.exe.manifest
+D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\bin\Debug\LaporanKeuangan.application
+D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\LaporanKeuangan.exe.manifest
+D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\obj\Debug\LaporanKeuangan.application

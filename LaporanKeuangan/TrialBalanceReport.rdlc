@@ -2,13 +2,13 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Tablix Name="Tablix1">
+      <Tablix Name="Tablix5">
         <TablixCorner>
           <TablixCornerRows>
             <TablixCornerRow>
               <TablixCornerCell>
                 <CellContents>
-                  <Textbox Name="Textbox7">
+                  <Textbox Name="Textbox68">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
@@ -22,12 +22,51 @@
                         <Style />
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>Textbox7</rd:DefaultName>
+                    <rd:DefaultName>Textbox68</rd:DefaultName>
                     <Style>
                       <Border>
-                        <Color>LightGrey</Color>
                         <Style>Solid</Style>
                       </Border>
+                      <BackgroundColor>#ececec</BackgroundColor>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                  <ColSpan>2</ColSpan>
+                </CellContents>
+              </TablixCornerCell>
+              <TablixCornerCell />
+            </TablixCornerRow>
+            <TablixCornerRow>
+              <TablixCornerCell>
+                <CellContents>
+                  <Textbox Name="Textbox44">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>KODE AKUN</Value>
+                            <Style>
+                              <FontWeight>Bold</FontWeight>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Textbox44</rd:DefaultName>
+                    <Style>
+                      <Border>
+                        <Style>Solid</Style>
+                      </Border>
+                      <BackgroundColor>LightSteelBlue</BackgroundColor>
+                      <VerticalAlign>Middle</VerticalAlign>
                       <PaddingLeft>2pt</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
                       <PaddingTop>2pt</PaddingTop>
@@ -36,36 +75,33 @@
                   </Textbox>
                 </CellContents>
               </TablixCornerCell>
-            </TablixCornerRow>
-            <TablixCornerRow>
               <TablixCornerCell>
                 <CellContents>
-                  <Textbox Name="Textbox8">
+                  <Textbox Name="Textbox45">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>kode akun</Value>
+                            <Value>NAMA AKUN</Value>
                             <Style>
-                              <FontFamily>Tahoma</FontFamily>
-                              <FontSize>11pt</FontSize>
                               <FontWeight>Bold</FontWeight>
-                              <Color>White</Color>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>Textbox8</rd:DefaultName>
+                    <rd:DefaultName>Textbox45</rd:DefaultName>
                     <Style>
                       <Border>
-                        <Color>#7292cc</Color>
                         <Style>Solid</Style>
                       </Border>
-                      <BackgroundColor>#4c68a2</BackgroundColor>
+                      <BackgroundColor>LightSteelBlue</BackgroundColor>
+                      <VerticalAlign>Middle</VerticalAlign>
                       <PaddingLeft>2pt</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
                       <PaddingTop>2pt</PaddingTop>
@@ -80,16 +116,16 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.625in</Width>
+              <Width>1.33333in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.72917in</Width>
+              <Width>1.29167in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.61458in</Width>
+              <Width>1.40625in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.65625in</Width>
+              <Width>1.48958in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -107,23 +143,33 @@
                             <TextRun>
                               <Value>=Sum(Fields!debet_transaksi.Value)</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Format>N0</Format>
-                                <Color>#4d4d4d</Color>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>debet_transaksi</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#e5e5e5</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <TopBorder>
+                          <Color>Silver</Color>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Silver</Color>
+                        </BottomBorder>
+                        <RightBorder>
+                          <Color>Silver</Color>
+                        </RightBorder>
+                        <BackgroundColor>#d0ffb4</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingRight>4pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
@@ -141,23 +187,33 @@
                             <TextRun>
                               <Value>=Sum(Fields!kredit_transaksi.Value)</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <Format>N0</Format>
-                                <Color>#4d4d4d</Color>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>kredit_transaksi</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#e5e5e5</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <TopBorder>
+                          <Color>Silver</Color>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Silver</Color>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Silver</Color>
+                        </LeftBorder>
+                        <BackgroundColor>#ffdbe4</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingRight>4pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
@@ -166,7 +222,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox23">
+                    <Textbox Name="Textbox94">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -175,25 +231,32 @@
                             <TextRun>
                               <Value>=Sum(Fields!debet_transaksi.Value)</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>N0</Format>
-                                <Color>White</Color>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox23</rd:DefaultName>
+                      <rd:DefaultName>Textbox94</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#9eb6e4</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>#7292cc</BackgroundColor>
+                        <TopBorder>
+                          <Color>Silver</Color>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Silver</Color>
+                        </BottomBorder>
+                        <RightBorder>
+                          <Color>Silver</Color>
+                        </RightBorder>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingRight>4pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
@@ -202,7 +265,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox28">
+                    <Textbox Name="Textbox98">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -211,25 +274,32 @@
                             <TextRun>
                               <Value>=Sum(Fields!kredit_transaksi.Value)</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>N0</Format>
-                                <Color>White</Color>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox28</rd:DefaultName>
+                      <rd:DefaultName>Textbox98</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#9eb6e4</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>#7292cc</BackgroundColor>
+                        <TopBorder>
+                          <Color>Silver</Color>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Silver</Color>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Silver</Color>
+                        </LeftBorder>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingRight>4pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
@@ -243,7 +313,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox19">
+                    <Textbox Name="Textbox90">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -252,25 +322,24 @@
                             <TextRun>
                               <Value>=Sum(Fields!debet_transaksi.Value)</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>N0</Format>
-                                <Color>#465678</Color>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox19</rd:DefaultName>
+                      <rd:DefaultName>Textbox90</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#c6daf8</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>#9eb6e4</BackgroundColor>
+                        <BackgroundColor>PaleGreen</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingRight>4pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
@@ -279,7 +348,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox20">
+                    <Textbox Name="Textbox91">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -288,25 +357,24 @@
                             <TextRun>
                               <Value>=Sum(Fields!kredit_transaksi.Value)</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>N0</Format>
-                                <Color>#465678</Color>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox20</rd:DefaultName>
+                      <rd:DefaultName>Textbox91</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#c6daf8</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>#9eb6e4</BackgroundColor>
+                        <BackgroundColor>Pink</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingRight>4pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
@@ -315,7 +383,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox24">
+                    <Textbox Name="Textbox95">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -324,25 +392,24 @@
                             <TextRun>
                               <Value>=Sum(Fields!debet_transaksi.Value)</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>N0</Format>
-                                <Color>#465678</Color>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox24</rd:DefaultName>
+                      <rd:DefaultName>Textbox95</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#c6daf8</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>#9eb6e4</BackgroundColor>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingRight>4pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
@@ -351,7 +418,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox29">
+                    <Textbox Name="Textbox99">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -360,174 +427,24 @@
                             <TextRun>
                               <Value>=Sum(Fields!kredit_transaksi.Value)</Value>
                               <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>N0</Format>
-                                <Color>#465678</Color>
+                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox29</rd:DefaultName>
+                      <rd:DefaultName>Textbox99</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Color>#c6daf8</Color>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>#9eb6e4</BackgroundColor>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-              </TablixCells>
-            </TablixRow>
-            <TablixRow>
-              <Height>0.25in</Height>
-              <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox15">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Sum(Fields!debet_transaksi.Value)</Value>
-                              <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>N0</Format>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox15</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#9eb6e4</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>#7292cc</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox16">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Sum(Fields!kredit_transaksi.Value)</Value>
-                              <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>N0</Format>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox16</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#9eb6e4</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>#7292cc</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox25">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Sum(Fields!debet_transaksi.Value)</Value>
-                              <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>N0</Format>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox25</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#9eb6e4</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>#7292cc</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox30">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Sum(Fields!kredit_transaksi.Value)</Value>
-                              <Style>
-                                <FontFamily>Tahoma</FontFamily>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>N0</Format>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox30</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>#9eb6e4</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <BackgroundColor>#7292cc</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingRight>4pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
@@ -541,9 +458,9 @@
         <TablixColumnHierarchy>
           <TablixMembers>
             <TablixMember>
-              <Group Name="jenis_id">
+              <Group Name="nama_transaksi1">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!jenis_id.Value</GroupExpression>
+                  <GroupExpression>=Fields!nama_transaksi.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
@@ -554,31 +471,31 @@
               <TablixHeader>
                 <Size>0.25in</Size>
                 <CellContents>
-                  <Textbox Name="jenis_id">
+                  <Textbox Name="nama_transaksi1">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>=Fields!jenis_id.Value</Value>
+                            <Value>=Fields!nama_transaksi.Value</Value>
                             <Style>
-                              <FontFamily>Tahoma</FontFamily>
                               <FontWeight>Bold</FontWeight>
-                              <Color>#465678</Color>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>jenis_id</rd:DefaultName>
+                    <rd:DefaultName>nama_transaksi1</rd:DefaultName>
                     <Style>
                       <Border>
-                        <Color>#c6daf8</Color>
                         <Style>Solid</Style>
                       </Border>
-                      <BackgroundColor>#9eb6e4</BackgroundColor>
+                      <BackgroundColor>LightGrey</BackgroundColor>
+                      <VerticalAlign>Middle</VerticalAlign>
                       <PaddingLeft>2pt</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
                       <PaddingTop>2pt</PaddingTop>
@@ -592,32 +509,29 @@
                   <TablixHeader>
                     <Size>0.25in</Size>
                     <CellContents>
-                      <Textbox Name="Textbox3">
+                      <Textbox Name="nama_transaksi">
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
                         <Paragraphs>
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>debet transaksi</Value>
-                                <Style>
-                                  <FontFamily>Tahoma</FontFamily>
-                                  <FontSize>11pt</FontSize>
-                                  <FontWeight>Bold</FontWeight>
-                                  <Color>White</Color>
-                                </Style>
+                                <Value>DEBET</Value>
+                                <Style />
                               </TextRun>
                             </TextRuns>
-                            <Style />
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
                           </Paragraph>
                         </Paragraphs>
-                        <rd:DefaultName>Textbox3</rd:DefaultName>
+                        <rd:DefaultName>nama_transaksi</rd:DefaultName>
                         <Style>
                           <Border>
-                            <Color>#7292cc</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>#4c68a2</BackgroundColor>
+                          <BackgroundColor>PaleGreen</BackgroundColor>
+                          <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
                           <PaddingTop>2pt</PaddingTop>
@@ -634,32 +548,29 @@
                   <TablixHeader>
                     <Size>0.25in</Size>
                     <CellContents>
-                      <Textbox Name="Textbox5">
+                      <Textbox Name="Textbox67">
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
                         <Paragraphs>
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>kredit transaksi</Value>
-                                <Style>
-                                  <FontFamily>Tahoma</FontFamily>
-                                  <FontSize>11pt</FontSize>
-                                  <FontWeight>Bold</FontWeight>
-                                  <Color>White</Color>
-                                </Style>
+                                <Value>KREDIT</Value>
+                                <Style />
                               </TextRun>
                             </TextRuns>
-                            <Style />
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
                           </Paragraph>
                         </Paragraphs>
-                        <rd:DefaultName>Textbox5</rd:DefaultName>
+                        <rd:DefaultName>Textbox67</rd:DefaultName>
                         <Style>
                           <Border>
-                            <Color>#7292cc</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>#4c68a2</BackgroundColor>
+                          <BackgroundColor>Pink</BackgroundColor>
+                          <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
                           <PaddingTop>2pt</PaddingTop>
@@ -668,6 +579,9 @@
                       </Textbox>
                     </CellContents>
                   </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember />
+                  </TablixMembers>
                 </TablixMember>
               </TablixMembers>
             </TablixMember>
@@ -675,31 +589,31 @@
               <TablixHeader>
                 <Size>0.25in</Size>
                 <CellContents>
-                  <Textbox Name="Textbox21">
+                  <Textbox Name="Textbox92">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Total</Value>
+                            <Value>TOTAL</Value>
                             <Style>
-                              <FontFamily>Tahoma</FontFamily>
                               <FontWeight>Bold</FontWeight>
-                              <Color>White</Color>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>Textbox21</rd:DefaultName>
+                    <rd:DefaultName>Textbox92</rd:DefaultName>
                     <Style>
                       <Border>
-                        <Color>#9eb6e4</Color>
                         <Style>Solid</Style>
                       </Border>
-                      <BackgroundColor>#7292cc</BackgroundColor>
+                      <BackgroundColor>Silver</BackgroundColor>
+                      <VerticalAlign>Middle</VerticalAlign>
                       <PaddingLeft>2pt</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
                       <PaddingTop>2pt</PaddingTop>
@@ -713,32 +627,29 @@
                   <TablixHeader>
                     <Size>0.25in</Size>
                     <CellContents>
-                      <Textbox Name="Textbox22">
+                      <Textbox Name="nama_transaksi3">
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
                         <Paragraphs>
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>debet transaksi</Value>
-                                <Style>
-                                  <FontFamily>Tahoma</FontFamily>
-                                  <FontSize>11pt</FontSize>
-                                  <FontWeight>Bold</FontWeight>
-                                  <Color>White</Color>
-                                </Style>
+                                <Value>DEBET</Value>
+                                <Style />
                               </TextRun>
                             </TextRuns>
-                            <Style />
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
                           </Paragraph>
                         </Paragraphs>
-                        <rd:DefaultName>Textbox22</rd:DefaultName>
+                        <rd:DefaultName>nama_transaksi</rd:DefaultName>
                         <Style>
                           <Border>
-                            <Color>#7292cc</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>#4c68a2</BackgroundColor>
+                          <BackgroundColor>LightGrey</BackgroundColor>
+                          <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
                           <PaddingTop>2pt</PaddingTop>
@@ -752,32 +663,29 @@
                   <TablixHeader>
                     <Size>0.25in</Size>
                     <CellContents>
-                      <Textbox Name="Textbox27">
+                      <Textbox Name="Textbox70">
                         <CanGrow>true</CanGrow>
                         <KeepTogether>true</KeepTogether>
                         <Paragraphs>
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>kredit transaksi</Value>
-                                <Style>
-                                  <FontFamily>Tahoma</FontFamily>
-                                  <FontSize>11pt</FontSize>
-                                  <FontWeight>Bold</FontWeight>
-                                  <Color>White</Color>
-                                </Style>
+                                <Value>KREDIT</Value>
+                                <Style />
                               </TextRun>
                             </TextRuns>
-                            <Style />
+                            <Style>
+                              <TextAlign>Center</TextAlign>
+                            </Style>
                           </Paragraph>
                         </Paragraphs>
-                        <rd:DefaultName>Textbox27</rd:DefaultName>
+                        <rd:DefaultName>Textbox67</rd:DefaultName>
                         <Style>
                           <Border>
-                            <Color>#7292cc</Color>
                             <Style>Solid</Style>
                           </Border>
-                          <BackgroundColor>#4c68a2</BackgroundColor>
+                          <BackgroundColor>LightGrey</BackgroundColor>
+                          <VerticalAlign>Middle</VerticalAlign>
                           <PaddingLeft>2pt</PaddingLeft>
                           <PaddingRight>2pt</PaddingRight>
                           <PaddingTop>2pt</PaddingTop>
@@ -815,11 +723,7 @@
                         <TextRuns>
                           <TextRun>
                             <Value>=Fields!kode_akun.Value</Value>
-                            <Style>
-                              <FontFamily>Tahoma</FontFamily>
-                              <FontWeight>Bold</FontWeight>
-                              <Color>#4c68a2</Color>
-                            </Style>
+                            <Style />
                           </TextRun>
                         </TextRuns>
                         <Style>
@@ -830,10 +734,18 @@
                     <rd:DefaultName>kode_akun</rd:DefaultName>
                     <Style>
                       <Border>
-                        <Color>#e6eefc</Color>
                         <Style>Solid</Style>
                       </Border>
-                      <BackgroundColor>#c6daf8</BackgroundColor>
+                      <TopBorder>
+                        <Color>Silver</Color>
+                      </TopBorder>
+                      <BottomBorder>
+                        <Color>Silver</Color>
+                      </BottomBorder>
+                      <RightBorder>
+                        <Color>Silver</Color>
+                      </RightBorder>
+                      <VerticalAlign>Middle</VerticalAlign>
                       <PaddingLeft>2pt</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
                       <PaddingTop>2pt</PaddingTop>
@@ -843,38 +755,93 @@
                 </CellContents>
               </TablixHeader>
               <TablixMembers>
-                <TablixMember />
+                <TablixMember>
+                  <Group Name="nama_akun">
+                    <GroupExpressions>
+                      <GroupExpression>=Fields!nama_akun.Value</GroupExpression>
+                    </GroupExpressions>
+                  </Group>
+                  <SortExpressions>
+                    <SortExpression>
+                      <Value>=Fields!nama_akun.Value</Value>
+                    </SortExpression>
+                  </SortExpressions>
+                  <TablixHeader>
+                    <Size>4.48958in</Size>
+                    <CellContents>
+                      <Textbox Name="nama_akun">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=Fields!nama_akun.Value</Value>
+                                <Style />
+                              </TextRun>
+                            </TextRuns>
+                            <Style>
+                              <TextAlign>Left</TextAlign>
+                            </Style>
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>nama_akun</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Style>Solid</Style>
+                          </Border>
+                          <TopBorder>
+                            <Color>Silver</Color>
+                          </TopBorder>
+                          <BottomBorder>
+                            <Color>Silver</Color>
+                          </BottomBorder>
+                          <LeftBorder>
+                            <Color>Silver</Color>
+                          </LeftBorder>
+                          <BackgroundColor>=IIF(RowNumber(Nothing) MOD 2, "Transparent", "#ececec")</BackgroundColor>
+                          <VerticalAlign>Middle</VerticalAlign>
+                          <PaddingLeft>4pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                      <rd:Selected>true</rd:Selected>
+                    </CellContents>
+                  </TablixHeader>
+                </TablixMember>
               </TablixMembers>
             </TablixMember>
             <TablixMember>
               <TablixHeader>
-                <Size>1in</Size>
+                <Size>5.48958in</Size>
                 <CellContents>
-                  <Textbox Name="Textbox18">
+                  <Textbox Name="Textbox88">
                     <CanGrow>true</CanGrow>
                     <KeepTogether>true</KeepTogether>
                     <Paragraphs>
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Total</Value>
+                            <Value>TOTAL</Value>
                             <Style>
-                              <FontFamily>Tahoma</FontFamily>
                               <FontWeight>Bold</FontWeight>
-                              <Color>#465678</Color>
                             </Style>
                           </TextRun>
                         </TextRuns>
-                        <Style />
+                        <Style>
+                          <TextAlign>Center</TextAlign>
+                        </Style>
                       </Paragraph>
                     </Paragraphs>
-                    <rd:DefaultName>Textbox18</rd:DefaultName>
+                    <rd:DefaultName>Textbox88</rd:DefaultName>
                     <Style>
                       <Border>
-                        <Color>#c6daf8</Color>
                         <Style>Solid</Style>
                       </Border>
-                      <BackgroundColor>#9eb6e4</BackgroundColor>
+                      <BackgroundColor>LightGrey</BackgroundColor>
+                      <VerticalAlign>Middle</VerticalAlign>
                       <PaddingLeft>2pt</PaddingLeft>
                       <PaddingRight>2pt</PaddingRight>
                       <PaddingTop>2pt</PaddingTop>
@@ -883,57 +850,23 @@
                   </Textbox>
                 </CellContents>
               </TablixHeader>
-              <TablixMembers>
-                <TablixMember />
-              </TablixMembers>
               <KeepWithGroup>Before</KeepWithGroup>
-            </TablixMember>
-            <TablixMember>
-              <TablixHeader>
-                <Size>1in</Size>
-                <CellContents>
-                  <Textbox Name="Textbox14">
-                    <CanGrow>true</CanGrow>
-                    <KeepTogether>true</KeepTogether>
-                    <Paragraphs>
-                      <Paragraph>
-                        <TextRuns>
-                          <TextRun>
-                            <Value />
-                            <Style>
-                              <FontFamily>Tahoma</FontFamily>
-                              <FontWeight>Bold</FontWeight>
-                              <Color>White</Color>
-                            </Style>
-                          </TextRun>
-                        </TextRuns>
-                        <Style />
-                      </Paragraph>
-                    </Paragraphs>
-                    <rd:DefaultName>Textbox14</rd:DefaultName>
-                    <Style>
-                      <Border>
-                        <Color>#9eb6e4</Color>
-                        <Style>Solid</Style>
-                      </Border>
-                      <BackgroundColor>#7292cc</BackgroundColor>
-                      <PaddingLeft>2pt</PaddingLeft>
-                      <PaddingRight>2pt</PaddingRight>
-                      <PaddingTop>2pt</PaddingTop>
-                      <PaddingBottom>2pt</PaddingBottom>
-                    </Style>
-                  </Textbox>
-                </CellContents>
-              </TablixHeader>
-              <TablixMembers>
-                <TablixMember />
-              </TablixMembers>
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataTransaksiDataset</DataSetName>
-        <Height>1.25in</Height>
-        <Width>7.625in</Width>
+        <DataSetName>combined</DataSetName>
+        <SortExpressions>
+          <SortExpression>
+            <Value>=Fields!jenis_id.Value</Value>
+          </SortExpression>
+          <SortExpression>
+            <Value>=Fields!kode_akun.Value</Value>
+          </SortExpression>
+        </SortExpressions>
+        <Top>0.18625in</Top>
+        <Left>0.10292in</Left>
+        <Height>1in</Height>
+        <Width>11.01042in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -941,10 +874,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>2.10292in</Height>
     <Style />
   </Body>
-  <Width>9.35417in</Width>
+  <Width>11.11333in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
@@ -954,36 +887,40 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="LaporanKeuanganDatabaseDataSet">
+    <DataSource Name="LaporanKeuanganDatabaseDataSet1">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>a21044bb-6b43-4bf7-aa0d-57dd3f014294</rd:DataSourceID>
+      <rd:DataSourceID>cc9de26e-b646-4ab0-ba48-2418522eefd9</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataTransaksiDataset">
+    <DataSet Name="combined">
       <Query>
-        <DataSourceName>LaporanKeuanganDatabaseDataSet</DataSourceName>
+        <DataSourceName>LaporanKeuanganDatabaseDataSet1</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="transaksi_id">
-          <DataField>transaksi_id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="tanggal_transaksi">
           <DataField>tanggal_transaksi</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="jenis_id">
+          <DataField>jenis_id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="nama_transaksi">
+          <DataField>nama_transaksi</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="kode_akun">
           <DataField>kode_akun</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="jenis_id">
-          <DataField>jenis_id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="nama_akun">
+          <DataField>nama_akun</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="debet_transaksi">
           <DataField>debet_transaksi</DataField>
@@ -999,36 +936,12 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>LaporanKeuanganDatabaseDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\LaporanKeuanganDatabaseDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>DATA_TRANSAKSI</rd:TableName>
+        <rd:DataSetName>LaporanKeuanganDatabaseDataSet1</rd:DataSetName>
+        <rd:SchemaPath>D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\LaporanKeuanganDatabaseDataSet1.xsd</rd:SchemaPath>
+        <rd:TableName>COMBINED</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>DATA_TRANSAKSITableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
-    <DataSet Name="DaftarAkunDataset">
-      <Query>
-        <DataSourceName>LaporanKeuanganDatabaseDataSet</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="kode_akun">
-          <DataField>kode_akun</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="nama_akun">
-          <DataField>nama_akun</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>LaporanKeuanganDatabaseDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\Work Data\SMCC\LaporanKeuangan\LaporanKeuangan\LaporanKeuanganDatabaseDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>DAFTAR_AKUN</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>DAFTAR_AKUNTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>COMBINEDTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

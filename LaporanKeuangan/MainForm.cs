@@ -96,14 +96,13 @@ namespace LaporanKeuangan
 
             try 
             {
-                LaporanKeuanganDatabaseDataSet lk = new LaporanKeuanganDatabaseDataSet();
-                string q = "SELECT * FROM DATA_TRANSAKSI ORDER BY tanggal_transaksi";
+                LaporanKeuanganDatabaseDataSet1 lk = new LaporanKeuanganDatabaseDataSet1();
+                string q = "SELECT * FROM COMBINED ORDER BY kode_akun";
                 SqlConnection c = new SqlConnection(conString);
                 SqlDataAdapter ad = new SqlDataAdapter(q, c);
-                ad.Fill(lk,lk.Tables[1].TableName);
-                Console.WriteLine("Table : " + lk.Tables[1].TableName);
+                ad.Fill(lk, lk.Tables[3].TableName);
 
-                ReportDataSource rds = new ReportDataSource("DataTransaksiDataset", lk.Tables[1]);
+                ReportDataSource rds = new ReportDataSource("combined", lk.Tables[3]);
                 TrialBalanceReportViewer.LocalReport.DataSources.Clear();
                 TrialBalanceReportViewer.LocalReport.DataSources.Add(rds);
                 TrialBalanceReportViewer.LocalReport.Refresh();
