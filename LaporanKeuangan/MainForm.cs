@@ -93,7 +93,7 @@ namespace LaporanKeuangan
 
             this.TrialBalanceReportViewer.RefreshReport();
 
-
+            //Trial balance report
             try 
             {
                 LaporanKeuanganDatabaseDataSet1 lk = new LaporanKeuanganDatabaseDataSet1();

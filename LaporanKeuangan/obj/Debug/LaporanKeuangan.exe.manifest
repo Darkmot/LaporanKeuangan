@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="LaporanKeuangan.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="LaporanKeuangan.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="LaporanKeuangan" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>e/rQ6cN0Los4Psb2MGpHoTSFv2WQOeNEmAbsL0ez3yI=</dsig:DigestValue>
+        <dsig:DigestValue>4mWuO3fceJHgLVzRks5uUmKZAM+QPlKT7ajxDDG3sI8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -248,16 +248,16 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Q+bZxc8Ny4uCsXuuaVd6SG4ryYwCdBrVp9FB8SPsbBQ=</dsig:DigestValue>
+      <dsig:DigestValue>w3fRwEfpwCV4lsWVs68Q62SwMbZklTvdO0WmhFi6qbQ=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="LaporanKeuanganDatabase_log.ldf" size="851968" writeableType="applicationData">
+  <file name="LaporanKeuanganDatabase_log.ldf" size="540672" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>9yj9v+8MXgid78Cv9fRZljRuJj8SL6QWHs+/37/snNk=</dsig:DigestValue>
+      <dsig:DigestValue>iltsFE2nRVajNoZYaJCxuutuciGQKyTUDw7Roa/RbT0=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
